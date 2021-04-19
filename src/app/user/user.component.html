@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-3">
+    <input type="text" #name required  [(ngModel)]="userIdInput"/>
+    <button (click)="fetchPlayersSummaries(userIdInput)">Get user summaries</button>
+
+    <div class="card" *ngIf="userProfile" style="width: 18rem;">
+      <img src="{{ userProfile.avatarfull }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ userProfile.personaname }}</h5>
+        <p class="card-text"></p>
+        <a href="{{ userProfile.profileurl }}" target="_blank" class="btn btn-primary">Profile url</a>
+      </div>
+    </div>
+  </div>
+</div>
